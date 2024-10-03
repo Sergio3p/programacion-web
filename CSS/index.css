@@ -302,35 +302,70 @@ footer {
 /*FIN*/
 
 /* Media queries para pantallas pequeñas */
+/* Media query para pantallas móviles */
 @media (max-width: 768px) {
+    /* Ajuste del header */
     .header {
-        flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
-        height: auto; /* Ajusta la altura */
-        padding: 10px; /* Cambia el padding */
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
     }
-
-    .header .nav-links {
+    .header .logo img {
+        height: 60px; /* Reduce el tamaño del logo */
+    }
+    header .nav-links {
         display: flex;
-        flex-direction: column; /* Muestra los enlaces en columna */
-        align-items: center; /* Centra los enlaces */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    header .nav-links li {
+        padding: 10px 0;
+    }
+    header .btn button {
+        padding: 8px 20px; /* Ajusta el botón de contacto */
+        font-size: 16px;
     }
 
+    /* Ajuste de las imágenes y texto */
     .TextIMG1, .TextIMG2 {
-        flex-direction: column; /* Muestra imagen y texto en columna */
-        align-items: center; /* Centra elementos en columna */
+        flex-direction: column; /* Para que las imágenes y el texto se apilen */
+        text-align: center;
+    }
+    .TextIMG1 img, .TextIMG2 img {
+        max-width: 100%; /* Asegura que las imágenes no excedan el ancho de la pantalla */
+        margin: 0 auto; /* Centra las imágenes */
     }
 
+    /* Ajuste del contenedor de imágenes */
     .image-container {
-        flex-direction: column; /* Muestra imágenes en columna */
+        flex-direction: column; /* Apila las imágenes */
+    }
+    .image-item {
+        width: 100%;
+    }
+    .image-item img {
+        max-width: 150px; /* Reduce el tamaño de las imágenes circulares */
     }
 
+    /* Ajuste del carrusel de comentarios */
+    .carousel-inner p {
+        font-size: 18px; /* Reduce el tamaño del texto en comentarios */
+    }
+    .carousel-inner small {
+        font-size: 14px; /* Reduce el tamaño del autor */
+    }
+
+    /* Ajustes del pie de página */
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .footer-content {
-        flex-basis: 100%; /* Cada sección del pie de página ocupará el 100% */
-    }
-
-    /* Ajustes de fuente */
-    body {
-        font-size: 16px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+        flex-basis: 100%;
+        text-align: left;
+        margin-bottom: 20px;
     }
 }
 
