@@ -207,18 +207,24 @@ footer {
     position: absolute; /* Posiciona el overlay sobre la imagen */
     top: 20px; /* Ajusta según necesites */
     left: 20px; /* Ajusta según necesites */
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Asegura buen contraste */
     color: white;
     padding: 15px;
     border-radius: 8px; /* Opcional, para bordes redondeados */
+    max-width: calc(100% - 40px); /* Ajusta el ancho del overlay */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Añade sombra para mejor visibilidad */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente para mejorar la legibilidad */
 }
 
 #map {
     position: absolute; /* Posiciona el mapa sobre la imagen */
-    top: 20px; /* Ajusta la posición */
-    right: 150px; /* Ajusta la posición */
-    width: auto; /* Ajusta el ancho del mapa */
-    height: auto; /* Establece una altura fija */
+    top: 25px; /* Ajusta la posición para que no esté muy pegado al borde superior */
+    right: 300px; /* Ajusta la posición */
+    width: 300px; /* Define un ancho fijo */
+    height: 200px; /* Define una altura fija */
+    border: 2px solid rgba(0, 0, 0, 0.7); /* Agrega un borde para definir el área del mapa */
+    border-radius: 8px; /* Bordes redondeados para armonizar con el diseño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
 }
 
 /* Media queries para pantallas pequeñas */
