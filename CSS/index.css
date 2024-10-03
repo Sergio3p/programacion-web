@@ -301,73 +301,73 @@ footer {
 }
 /*FIN*/
 
-/* Media queries para pantallas pequeñas */
-/* Media query para pantallas móviles */
+/* Ajustes generales para pantallas pequeñas */
 @media (max-width: 768px) {
-    /* Ajuste del header */
+
+    /* Ajustes para el header */
     .header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px;
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;
     }
+  
     .header .logo img {
-        height: 60px; /* Reduce el tamaño del logo */
+      height: 60px;
     }
-    header .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
+  
     header .nav-links li {
-        padding: 10px 0;
+      display: block;
+      padding: 10px 0;
     }
+  
     header .btn button {
-        padding: 8px 20px; /* Ajusta el botón de contacto */
-        font-size: 16px;
+      width: 100%;
+      padding: 10px 0;
     }
-
-    /* Ajuste de las imágenes y texto */
+  
+    /* Ajustes para el carousel */
+    .carousel-inner img {
+      height: 200px;
+    }
+  
+    /* Ajustes para las secciones con imágenes y texto */
     .TextIMG1, .TextIMG2 {
-        flex-direction: column; /* Para que las imágenes y el texto se apilen */
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
     }
+  
     .TextIMG1 img, .TextIMG2 img {
-        max-width: 100%; /* Asegura que las imágenes no excedan el ancho de la pantalla */
-        margin: 0 auto; /* Centra las imágenes */
+      max-width: 100%;
+      margin: 10px auto;
     }
-
-    /* Ajuste del contenedor de imágenes */
+  
+    .text-box1, .text-box2 {
+      padding: 10px;
+    }
+  
+    /* Ajustes para la galería de productos */
     .image-container {
-        flex-direction: column; /* Apila las imágenes */
+      flex-direction: column;
     }
+  
     .image-item {
-        width: 100%;
+      margin: 20px auto;
     }
+  
     .image-item img {
-        max-width: 150px; /* Reduce el tamaño de las imágenes circulares */
+      max-width: 150px;
     }
-
-    /* Ajuste del carrusel de comentarios */
-    .carousel-inner p {
-        font-size: 18px; /* Reduce el tamaño del texto en comentarios */
-    }
-    .carousel-inner small {
-        font-size: 14px; /* Reduce el tamaño del autor */
-    }
-
-    /* Ajustes del pie de página */
+  
+    /* Ajustes para el pie de página */
     .container {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
     }
+  
     .footer-content {
-        flex-basis: 100%;
-        text-align: left;
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-}
+  }
+  
 
 img {
     max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
