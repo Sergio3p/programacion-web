@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     font-family: MiCaligrafia,'HelveticaNeueBold';
-    font-size: 20px; /* Ajusta el tamaño de fuente base */
+    font-size: 20px;
     color: white;
 }
 
@@ -19,56 +19,72 @@ body {
     overflow-x: hidden;
 }
 
-/* BARRA DE NAVEGACIÓN */
+/*BARRA DE NAVEGACIÓN*/
+/*INICIO*/
 .header {
     background-color: #003333ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 5px 10%; /* Se puede ajustar en mobile */
+    padding: 5px 10%;
 }
 
 .header .logo {
     cursor: pointer;
 }
 
-.header .logo img {
+.header .logo img{
     height: 85px;
     width: auto;
     transition: all 0.3s;
 }
 
-/* Efecto hover */
-.header .logo img:hover {
-    transform: scale(1.2);
+/*para dar efecto*/
+.header .logo img:hover{
+    transform: scale(1.2); 
 }
 
-.header .nav-links {
-    list-style: none; /* quita los puntos de la lista */
+/* Estilos para el menú de navegación */
+.navbar-toggler {
+    border: none; /* Sin borde */
+    background: none; /* Sin fondo */
+    color: white; /* Color del ícono */
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer;
 }
 
-.header .nav-links li {
+.navbar-toggler-icon {
+    color: wheat;
+}
+
+.nav-links{
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.header .nav-links a {
-    font-size: 1rem; /* Cambia a rem para mayor escalabilidad */
+.nav-links a {
+    font-weight: 700;
     color: white;
     text-decoration: none;
 }
 
-.header .nav-links li:hover {
+.nav-links li:hover {
     transform: scale(1.1);
 }
 
-.header .nav-links li a:hover {
-    color: #9c9286ff;
+
+.header .nav-links li a:hover{
+    color:#9c9286ff;
 }
 
-.header .btn button {
-    font-weight: bold; /* Usa font-weight en lugar de font */
+.header .btn button{
+    font: 700;
     color: rgb(255, 255, 255);
     padding: 9px 25px;
     background: #9c9286ff;
@@ -78,31 +94,43 @@ body {
     transition: all 0.3s ease 0s;
 }
 
-.header .btn button:hover {
+.header .btn button:hover{
     background-color: wheat;
     color: rgb(138, 138, 110);
+    transform: scale(1.1);
 }
-
+/*FIN*/
 /* Contenido Principal */
-.image-container1,
-.image-container2 {
+/* INICIO */
+.image-container1 {
+    background-color: #754c4c;
     display: flex;
     justify-content: space-around; /* Espacio entre columnas */
-    margin: 0;
-    background-color: rgb(129, 85, 85);
+    margin: 0; /* Espacio superior e inferior */
 }
 
-.image-container1 h6,
-.image-container1 p,
-.image-container2 p {
-    color: wheat;
+.image-container2 {
+    background-color: rgb(127, 119, 103);
+    display: flex;
+    justify-content: space-around; /* Espacio entre columnas */
+    margin: 0; /* Espacio superior e inferior */
 }
 
 .image-container1 h6 {
-    font-weight: bold;
+    font-weight: bold; /* Hace que la letra sea más gruesa */
+    color: wheat;
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.image-container1 p {
+    color: wheat;
+}
+
+.image-container2 p {
+    margin: 20px;
+    color: rgb(255, 238, 205);
 }
 
 .image-item {
@@ -117,7 +145,9 @@ body {
     border-radius: 50%; /* Añade un redondeado al borde */
 }
 
+/* FIN */
 /* Pie de página */
+/* INICIO */
 footer {
     background: #003333ff;
     padding-top: 5px;
@@ -128,12 +158,18 @@ footer {
     margin: 0 auto; /* Centra horizontalmente el footer */
     display: flex;
     justify-content: space-between; /* Mantiene los bloques separados */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a diferentes resoluciones */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
 .footer-content {
     flex-basis: 33%; /* Cada sección ocupa el mismo espacio */
     text-align: center; /* Centra el contenido de cada bloque */
+}
+
+.h3f {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .footer-content p {
@@ -192,10 +228,16 @@ footer {
     margin: 0;
     font-size: 15px;
 }
+/* FIN */
 
 /* Texto sobre imagen */
+/* INICIO */
 .image-container {
     position: relative; /* Permite posicionar elementos absolutamente */
+}
+
+.image-container h3 {
+    margin-bottom: 20px;
 }
 
 .image-container img {
@@ -207,28 +249,26 @@ footer {
     position: absolute; /* Posiciona el overlay sobre la imagen */
     top: 20px; /* Ajusta según necesites */
     left: 20px; /* Ajusta según necesites */
-    background: rgba(0, 0, 0, 0.7); /* Asegura buen contraste */
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 15px;
     border-radius: 8px; /* Opcional, para bordes redondeados */
-    max-width: calc(100% - 40px); /* Ajusta el ancho del overlay */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Añade sombra para mejor visibilidad */
-    font-size: 1.2rem; /* Aumenta el tamaño de la fuente para mejorar la legibilidad */
 }
 
 #map {
     position: absolute; /* Posiciona el mapa sobre la imagen */
-    top: 25px; /* Ajusta la posición para que no esté muy pegado al borde superior */
-    right: 300px; /* Ajusta la posición */
-    width: 300px; /* Define un ancho fijo */
-    height: 200px; /* Define una altura fija */
-    border: 2px solid rgba(0, 0, 0, 0.7); /* Agrega un borde para definir el área del mapa */
-    border-radius: 8px; /* Bordes redondeados para armonizar con el diseño */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    top: 20px; /* Ajusta la posición */
+    right: 150px; /* Ajusta la posición */
+    width: auto; /* Ajusta el ancho del mapa */
+    height: auto; /* Establece una altura fija */
 }
+/* FIN */
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
+
+    /* Ajustes para el header */
+    
     .header {
         flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
         height: auto; /* Ajusta la altura */
@@ -241,34 +281,31 @@ footer {
         align-items: center; /* Centra los enlaces */
     }
 
-    .image-container1,
-    .image-container2 {
-        flex-direction: column; /* Muestra las columnas en vertical */
-        align-items: center; /* Centra elementos en columna */
+    
+  
+    /* Ajustes para el pie de página */
+    .container {
+      flex-direction: column;
     }
-
-    .image-item {
-        margin: 10px 0; /* Reduce el margen en pantallas pequeñas */
-    }
-
+  
     .footer-content {
-        flex-basis: 100%; /* Cada sección del pie de página ocupará el 100% */
-        margin-bottom: 20px; /* Añade margen inferior para separarlos */
-    }
-
-    /* Ajustes de fuente */
-    body {
-        font-size: 16px; /* Reduce el tamaño de fuente en pantallas pequeñas */
-    }
-
-    .overlay {
-        top: 10px; /* Ajusta la posición del overlay */
-        left: 10px; /* Ajusta la posición del overlay */
-        padding: 10px; /* Reduce el padding del overlay */
+      margin-bottom: 20px;
     }
 }
 
-/* Asegúrate de que las imágenes se ajusten a su contenedor */
+/* Ajustes generales para pantallas pequeñas */
+@media (max-width: 992px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
 img {
     max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
     height: auto; /* Mantiene la relación de aspecto */
@@ -278,7 +315,6 @@ img {
     padding: 12px 30px; /* Aumenta el padding para pantallas táctiles */
 }
 
-/* Mejora la accesibilidad */
 body {
     font-size: 1rem; /* Esto es más accesible y escalable */
 }
