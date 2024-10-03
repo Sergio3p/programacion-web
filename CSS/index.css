@@ -339,21 +339,16 @@ footer {
 /*FIN*/
 @media (max-width: 768px) {
 
-  /* Ajustes para el header */
     .header {
-    flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
-    height: auto; /* Ajusta la altura */
-    padding: 10px; /* Cambia el padding */
+        flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
+        height: auto; /* Ajusta la altura */
+        padding: 10px; /* Cambia el padding */
     }
 
     .header .nav-links {
-    display: flex;
-    flex-direction: column; /* Muestra los enlaces en columna */
-    align-items: center; /* Centra los enlaces */
-    }
-    
-    .nav-links{
         display: flex;
+        flex-direction: column; /* Muestra los enlaces en columna */
+        align-items: center; /* Centra los enlaces */
     }
 
   /* Ajustes para el carousel */
@@ -424,4 +419,3 @@ img {
 body {
     font-size: 1rem; /* Esto es más accesible y escalable */
 }
-
