@@ -217,13 +217,14 @@ input::placeholder, textarea::placeholder {
         font-size: 18px; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
     }
 
-     input, textarea {
+    input, textarea {
         width: 100%; /* Los inputs ocuparán todo el ancho disponible del formulario */
         padding: 12px 15px; /* Ajustamos el padding */
         margin-bottom: 15px; /* Reducimos el espacio entre los campos */
         font-size: 14px; /* Ajustar el tamaño de la fuente */
        
     }
+
 
 
     .btn1 {
