@@ -15,11 +15,18 @@
 }
 
 body {
-    background-color: rgb(255, 219, 244);
+    background-image: url("../IMAGENES/Designer (13).jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
     overflow-x: hidden;
+   
+
 }
 
-/* BARRA DE NAVEGACIÓN */
+/*BARRA DE NAVEGACIÓN*/
+/*INICIO*/
 .header {
     background-color: #003333ff;
     display: flex;
@@ -33,39 +40,56 @@ body {
     cursor: pointer;
 }
 
-.header .logo img {
+.header .logo img{
     height: 85px;
     width: auto;
     transition: all 0.3s;
 }
 
-.header .logo img:hover {
-    transform: scale(1.2);
+/*para dar efecto*/
+.header .logo img:hover{
+    transform: scale(1.2); 
 }
 
-header .nav-links {
+/* Estilos para el menú de navegación */
+.navbar-toggler {
+    border: none; /* Sin borde */
+    background: none; /* Sin fondo */
+    color: white; /* Color del ícono */
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    color: wheat;
+}
+
+.nav-links{
     list-style: none;
+    padding: 0;
 }
 
-header .nav-links li {
+.nav-links li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.header .nav-links li:hover {
-    transform: scale(1.1);
-}
-
-header .nav-links a {
+.nav-links a {
+    font-weight: 700;
     color: white;
     text-decoration: none;
 }
 
-.header .nav-links li a:hover {
-    color: #9c9286ff;
+.nav-links li:hover {
+    transform: scale(1.1);
 }
 
-.header .btn button {
+
+.header .nav-links li a:hover{
+    color:#9c9286ff;
+}
+
+.header .btn button{
     font: 700;
     color: rgb(255, 255, 255);
     padding: 9px 25px;
@@ -76,15 +100,18 @@ header .nav-links a {
     transition: all 0.3s ease 0s;
 }
 
-.header .btn button:hover {
+.header .btn button:hover{
     background-color: wheat;
     color: rgb(138, 138, 110);
+    transform: scale(1.1);
 }
+/*FIN*/
+
 
 /* FORMULARIO */
 .image-container-1 {
     position: relative;
-    text-align: center;
+    text-align: center; /* Centra el contenido dentro del contenedor */
 }
 
 .background-image {
@@ -93,15 +120,13 @@ header .nav-links a {
 }
 
 .formulario {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(64, 64, 55, 0.734);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y transparente */
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 500px;
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 50px auto; /* Margen superior y centrado */
+    color: white; /* Color del texto */
 }
 
 form {
@@ -165,18 +190,47 @@ input::placeholder, textarea::placeholder {
     background-color: rgb(150, 75, 75);
 }
 
-@media(max-width:991px) {
-    body {
-        padding: 30px;
+@media (max-width: 768px) {
+
+    /* Ajustes para el header */
+    
+    .header {
+        flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
+        height: auto; /* Ajusta la altura */
+        padding: 10px; /* Cambia el padding */
     }
 
-    form {
-        padding: 50px 30px;
-        width: 100%;
+    .header .nav-links {
+        display: flex;
+        flex-direction: column; /* Muestra los enlaces en columna */
+        align-items: center; /* Centra los enlaces */
     }
 
-    input {
-        padding: 15px;
+    /**/
+    .formulario {
+        width: 95%; /* Aumentar el ancho en pantallas pequeñas */
+        padding: 15px; /* Ajustar el padding */
+    }
+
+    h2 {
+        font-size: 18px; /* Ajustar el tamaño de la fuente para pantallas pequeñas */
+    }
+
+    input, textarea {
+        font-size: 16px; /* Aumentar la legibilidad */
+    }
+
+    .btn1 {
+        padding: 10px 20px; /* Ajustar el tamaño del botón */
+    }
+  
+    /* Ajustes para el pie de página */
+    .container {
+      flex-direction: column;
+    }
+  
+    .footer-content {
+      margin-bottom: 20px;
     }
 }
 
@@ -184,6 +238,7 @@ input::placeholder, textarea::placeholder {
 footer {
     background: #003333ff;
     padding-top: 5px;
+    z-index: 2; /* Asegura que el footer esté por encima del contenido */
 }
 
 .container {
@@ -260,4 +315,16 @@ footer {
     color: white;
     margin: 0;
     font-size: 15px;
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
 }
