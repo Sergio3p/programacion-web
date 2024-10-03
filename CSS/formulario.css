@@ -208,9 +208,9 @@ input::placeholder, textarea::placeholder {
 
     /**/
     .formulario {
-        width: 90%; /* Hacemos el formulario más ancho en pantallas pequeñas */
-        max-width: 400px; /* Limitamos el ancho máximo en pantallas pequeñas */
-        padding: 15px; /* Reducimos el padding */
+        width: 95%; /* Hacemos que el formulario ocupe casi todo el ancho de la pantalla */
+        padding: 10px; /* Reducimos el padding general del formulario */
+        margin: 20px auto; /* Centramos el formulario en la pantalla */
     }
 
     h2 {
@@ -218,8 +218,10 @@ input::placeholder, textarea::placeholder {
     }
 
     input, textarea {
-        padding: 12px 15px; /* Reducimos el padding para que no ocupen demasiado espacio */
-        margin-bottom: 15px; /* Reducimos el espacio entre campos */
+        width: 100%; /* Los inputs ocuparán todo el ancho disponible del formulario */
+        padding: 12px 15px; /* Ajustamos el padding */
+        margin-bottom: 15px; /* Reducimos el espacio entre los campos */
+        box-sizing: border-box; /* Garantizamos que el padding y los bordes se incluyan en el ancho total */
     }
 
     .btn1 {
