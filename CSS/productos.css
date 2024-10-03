@@ -9,17 +9,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: MiCaligrafia, 'HelveticaNeueBold';
+    font-family: MiCaligrafia,'HelveticaNeueBold';
     font-size: 20px;
-    color: rgb(48, 43, 43);
+    color: white;
 }
 
 body {
-    background-color: #9c9286ff !important;
+    background-color: rgb(255, 219, 244);
     overflow-x: hidden;
 }
 
-/* BARRA DE NAVEGACIÓN */
+/*BARRA DE NAVEGACIÓN*/
+/*INICIO*/
 .header {
     background-color: #003333ff;
     display: flex;
@@ -33,40 +34,56 @@ body {
     cursor: pointer;
 }
 
-.header .logo img {
+.header .logo img{
     height: 85px;
     width: auto;
     transition: all 0.3s;
 }
 
-.header .logo img:hover {
-    transform: scale(1.2);
+/*para dar efecto*/
+.header .logo img:hover{
+    transform: scale(1.2); 
 }
 
-.header .nav-links {
-    list-style: none; /* quita los puntos de la lista */
+/* Estilos para el menú de navegación */
+.navbar-toggler {
+    border: none; /* Sin borde */
+    background: none; /* Sin fondo */
+    color: white; /* Color del ícono */
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer;
 }
 
-.header .nav-links li {
+.navbar-toggler-icon {
+    color: wheat;
+}
+
+.nav-links{
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.header .nav-links li:hover {
-    transform: scale(1.1);
-}
-
-.header .nav-links a {
-    font-size: 700;
+.nav-links a {
+    font-weight: 700;
     color: white;
     text-decoration: none;
 }
 
-.header .nav-links li a:hover {
-    color: #9c9286ff;
+.nav-links li:hover {
+    transform: scale(1.1);
 }
 
-.header .btn button {
+
+.header .nav-links li a:hover{
+    color:#9c9286ff;
+}
+
+.header .btn button{
     font: 700;
     color: rgb(255, 255, 255);
     padding: 9px 25px;
@@ -77,39 +94,47 @@ body {
     transition: all 0.3s ease 0s;
 }
 
-.header .btn button:hover {
+.header .btn button:hover{
     background-color: wheat;
     color: rgb(138, 138, 110);
+    transform: scale(1.1);
 }
+/*FIN*/
 
 /* TARJETAS */
 .container-1 {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
-    justify-content: space-between; /* Distribuye las tarjetas uniformemente */
-    gap: 20px; /* Espacio entre las tarjetas */
-    max-width: 1100px;
-    margin: 0 auto; /* Centra el contenedor */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples filas */
+    justify-content: space-around; /* Distribuye las tarjetas de manera uniforme */
+    padding: 20px; /* Añade un padding alrededor de las tarjetas */
 }
 
+.contenido {
+    padding: 15px;
+    text-align: center;
+}
 .card {
-    flex: 1 1 calc(33.333% - 40px); /* Cada tarjeta ocupa un tercio del ancho */
+    flex: 1 1 300px; /* Cada tarjeta ocupa un tercio del ancho */
     margin: 10px; /* Espaciado alrededor de las tarjetas */
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
     background: white;
     box-shadow: 0px 1px 10px rgba(69, 69, 69, 0.606);
-    transition: all 400ms ease;
+    transition: transform 0.2s;
+    max-width: 300px;
+
 }
 
 .card:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
 }
 
 .card img {
     width: 100%;
-    height: 250px;
+    border-top-left-radius: 10px; /* Redondea la parte superior izquierda */
+    border-top-right-radius: 10px; /* Redondea la parte superior derecha */
 }
 
 .card .contenido {
@@ -234,4 +259,49 @@ footer {
     color: white;
     margin: 0;
     font-size: 15px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Ajustes para el header */
+    
+    .header {
+        flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
+        height: auto; /* Ajusta la altura */
+        padding: 10px; /* Cambia el padding */
+    }
+
+    .header .nav-links {
+        display: flex;
+        flex-direction: column; /* Muestra los enlaces en columna */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Las tarjetas ocuparán el 100% en pantallas pequeñas */
+        max-width: 100%; /* Elimina el máximo ancho */
+    }
+  
+    /* Ajustes para el pie de página */
+    .container {
+      flex-direction: column;
+    }
+  
+    .footer-content {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Ajustes generales para pantallas pequeñas */
+@media (max-width: 992px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
 }
