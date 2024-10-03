@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     font-family: MiCaligrafia,'HelveticaNeueBold';
-    font-size: 20px;
+    font-size: 20px; /* Ajusta el tamaño de fuente base */
     color: white;
 }
 
@@ -20,14 +20,13 @@ body {
 }
 
 /* BARRA DE NAVEGACIÓN */
-/* INICIO */
 .header {
     background-color: #003333ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 5px 10%;
+    padding: 5px 10%; /* Se puede ajustar en mobile */
 }
 
 .header .logo {
@@ -40,28 +39,28 @@ body {
     transition: all 0.3s;
 }
 
-/* para dar efecto */
+/* Efecto hover */
 .header .logo img:hover {
     transform: scale(1.2);
 }
 
-header .nav-links {
+.header .nav-links {
     list-style: none; /* quita los puntos de la lista */
 }
 
-header .nav-links li {
+.header .nav-links li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.header .nav-links li:hover {
-    transform: scale(1.1);
-}
-
-header .nav-links a {
-    font-size: 700;
+.header .nav-links a {
+    font-size: 1rem; /* Cambia a rem para mayor escalabilidad */
     color: white;
     text-decoration: none;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
 }
 
 .header .nav-links li a:hover {
@@ -69,7 +68,7 @@ header .nav-links a {
 }
 
 .header .btn button {
-    font: 700;
+    font-weight: bold; /* Usa font-weight en lugar de font */
     color: rgb(255, 255, 255);
     padding: 9px 25px;
     background: #9c9286ff;
@@ -83,39 +82,27 @@ header .nav-links a {
     background-color: wheat;
     color: rgb(138, 138, 110);
 }
-/* FIN */
 
 /* Contenido Principal */
-/* INICIO */
-.image-container1 {
-    background-color: #754c4c;
+.image-container1,
+.image-container2 {
     display: flex;
     justify-content: space-around; /* Espacio entre columnas */
-    margin: 0; /* Espacio superior e inferior */
+    margin: 0;
+    background-color: rgb(129, 85, 85);
 }
 
-.image-container2 {
-    background-color: rgb(127, 119, 103);
-    display: flex;
-    justify-content: space-around; /* Espacio entre columnas */
-    margin: 0; /* Espacio superior e inferior */
+.image-container1 h6,
+.image-container1 p,
+.image-container2 p {
+    color: wheat;
 }
 
 .image-container1 h6 {
-    font-weight: bold; /* Hace que la letra sea más gruesa */
-    color: wheat;
+    font-weight: bold;
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.image-container1 p {
-    color: wheat;
-}
-
-.image-container2 p {
-    margin: 20px;
-    color: rgb(255, 238, 205);
 }
 
 .image-item {
@@ -130,9 +117,7 @@ header .nav-links a {
     border-radius: 50%; /* Añade un redondeado al borde */
 }
 
-/* FIN */
 /* Pie de página */
-/* INICIO */
 footer {
     background: #003333ff;
     padding-top: 5px;
@@ -143,18 +128,12 @@ footer {
     margin: 0 auto; /* Centra horizontalmente el footer */
     display: flex;
     justify-content: space-between; /* Mantiene los bloques separados */
-    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a diferentes resoluciones */
 }
 
 .footer-content {
     flex-basis: 33%; /* Cada sección ocupa el mismo espacio */
     text-align: center; /* Centra el contenido de cada bloque */
-}
-
-.h3f {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: white;
 }
 
 .footer-content p {
@@ -213,16 +192,10 @@ footer {
     margin: 0;
     font-size: 15px;
 }
-/* FIN */
 
 /* Texto sobre imagen */
-/* INICIO */
 .image-container {
     position: relative; /* Permite posicionar elementos absolutamente */
-}
-
-.image-container h3 {
-    margin-bottom: 20px;
 }
 
 .image-container img {
@@ -247,7 +220,6 @@ footer {
     width: auto; /* Ajusta el ancho del mapa */
     height: auto; /* Establece una altura fija */
 }
-/* FIN */
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -257,13 +229,14 @@ footer {
         padding: 10px; /* Cambia el padding */
     }
 
-    header .nav-links {
+    .header .nav-links {
         display: flex;
         flex-direction: column; /* Muestra los enlaces en columna */
         align-items: center; /* Centra los enlaces */
     }
 
-    .image-container1, .image-container2 {
+    .image-container1,
+    .image-container2 {
         flex-direction: column; /* Muestra las columnas en vertical */
         align-items: center; /* Centra elementos en columna */
     }
@@ -289,6 +262,7 @@ footer {
     }
 }
 
+/* Asegúrate de que las imágenes se ajusten a su contenedor */
 img {
     max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
     height: auto; /* Mantiene la relación de aspecto */
@@ -298,6 +272,7 @@ img {
     padding: 12px 30px; /* Aumenta el padding para pantallas táctiles */
 }
 
+/* Mejora la accesibilidad */
 body {
     font-size: 1rem; /* Esto es más accesible y escalable */
 }
