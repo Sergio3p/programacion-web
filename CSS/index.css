@@ -27,6 +27,8 @@ body{
     align-items: center;
     height: 85px;
     padding: 5px 10%;
+    position: relative;
+    z-index: 1000;
 }
 
 .header .logo {
@@ -46,6 +48,7 @@ body{
 
 /* Estilos para el menú de navegación */
 .navbar-toggler {
+    z-index: 1001; /* Asegura que el botón del menú esté por encima */
     border: none; /* Sin borde */
     background: none; /* Sin fondo */
     color: white; /* Color del ícono */
@@ -102,6 +105,11 @@ body{
 
 /*1° Carousel*/
 /*INICIO*/
+.carousel-inner {
+    position: relative;
+    z-index: 1; /* Asegura que el carrusel esté por debajo del menú */
+}
+
 .carousel-inner img {
     width: auto; /* Ajusta el tamaño según sea necesario */
     height: auto; /* Mantiene la relación de aspecto original */
