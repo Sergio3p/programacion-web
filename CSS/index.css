@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'MiCaligrafia';
+    src:    url("/FUENTEs/helvetica-neue-55-cufonfonts/HelveticaNeue-Light.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: MiCaligrafia,'HelveticaNeueBold';
+    font-size: 20px;
+    color: white;
+}
+
+body{
+    background-color: rgb(255, 219, 244);
+    overflow-x: hidden;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+/*INICIO*/
+.header {
+    background-color: #003333ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img{
+    height: 85px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+/*para dar efecto*/
+.header .logo img:hover{
+    transform: scale(1.2); 
+}
+
+header .nav-links{
+    list-style:none; /*quita los puntos de la lista*/    
+}
+
+header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+header .nav-links a{
+    font-size: 700;
+    color:white;
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover{
+    color:#9c9286ff;
+}
+
+.header .btn button{
+    font: 700;
+    color: rgb(255, 255, 255);
+    padding: 9px 25px;
+    background: #9c9286ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: wheat;
+    color: rgb(138, 138, 110);
+    transform: scale(1.1);
+}
+/*FIN*/
+
+/*1° Carousel*/
+/*INICIO*/
+.carousel-inner img {
+    width: auto; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la relación de aspecto original */
+    margin: 0 auto; /* Centra la imagen en el carrusel */
+    display: block; /* Asegura que las imágenes se comporten correctamente */
+}
+
+#pc1{
+    font-size: 25px;
+    color: white;
+}
+/*FIN*/
+
+/*1° Imagen con texto*/
+/*INICIO*/
+.TextIMG1 {
+    margin: auto;
+    width: 100%;
+    display: flex; /* Utilizamos flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente */
+    background-color: #254c57ff;
+}
+
+.TextIMG1 img {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+    margin-left: auto; /* Espacio a la izquierda de la imagen */
+}
+
+.text-box1 {
+    padding: 15px; /* Añadir un poco de espacio alrededor del texto */
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.text-box1 h2 {
+    display: block;
+    font-size: 35px; /* Aumenta el tamaño del h2 */
+    color: wheat;
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+.text-box1 p {
+    font-size: 20px;
+    color: wheat;
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+/*FIN*/
+
+/*2° Imagen con texto*/
+/*INICIO*/
+.TextIMG2 {
+    margin: auto;
+    width: 100%;
+    display: flex; /* Utilizamos flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente */
+    background-color: wheat; /* Cambia el color de fondo si lo deseas */
+    
+}
+
+.TextIMG2 img {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+    margin-left: auto; /* Espacio a la izquierda de la imagen */
+}
+
+.text-box2 {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    padding: 15px; /* Espacio alrededor del texto */
+}
+
+.text-box2 h2 {
+    font-size: 35px; /* Ajusta el tamaño del h2 */
+    color: #254c57; /* Color del texto */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+
+.text-box2 p {
+    font-size: 20px; /* Ajusta el tamaño del párrafo */
+    color: #254c57ff; /* Color del texto */
+    margin: 10px 0; /* Márgenes para el párrafo */
+}
+/*FIN*/
+
+/*3° Imagen con texto*/
+/*INICIO*/
+.image-container {
+    background-color: #254c57;
+    display: flex;
+    justify-content: space-around; /* Espacio entre columnas */
+    margin: 0; /* Espacio superior e inferior */
+}
+
+.image-item {
+    margin: 20px;
+    text-align: center; /* Centra el texto debajo de la imagen */
+}
+
+.image-item img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    max-width: 200px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 50%; /* Añade un redondeado al borde */
+}
+
+/*FIN*/
+
+/*2° Carousel (comentarios)*/
+/*INICIO*/
+.carousel-inner p {
+    font-size: 24px; /* Tamaño del texto del comentario */
+    color: #254c57ff; /* Color del texto */
+}
+
+.carousel-inner small {
+    font-size: 18px; /* Tamaño del texto del autor */
+    color: #254c57ff; /* Color del texto del autor */
+}
+
+#commentCarousel {
+    background-color:rgb(234, 208, 238); /* Cambia este valor por el color que prefieras */
+    padding: 20px; /* Añade un poco de padding para separar el contenido del borde */
+}
+
+.h2Comentarios {
+    text-align: center;
+    font-size: 30px; /* Tamaño del título del comentario */
+    color: #254c57; /* Color del título del comentario */
+    margin-top: 50px; /* Margen superior del título del comentario */
+    margin-bottom: 50px; /* Margen inferior del título del comentario */
+}
+/*FIN*/
+
+/*Pie de página*/
+/*INICIO*/
+footer {
+    background: #003333ff;
+    padding-top: 5px;
+}
+
+.container {
+    width: 80%; /* Ajusta el ancho para centrar mejor el contenido */
+    margin: 0 auto; /* Centra horizontalmente el footer */
+    display: flex;
+    justify-content: space-between; /* Mantiene los bloques separados */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.footer-content {
+    flex-basis: 33%; /* Cada sección ocupa el mismo espacio */
+    text-align: center; /* Centra el contenido de cada bloque */
+}
+
+.h3f {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: white;
+}
+
+.listFooter1 {
+    padding: 0;
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+.listFooter1 li {
+    margin: 5px 0; /* Añade un pequeño margen para separar los elementos */
+}
+
+.listFooter1 li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s ease;
+}
+
+.listFooter1 li a:hover {
+    color: #9c9286ff; /* Cambia el color al pasar el mouse */
+}
+
+.social-icons {
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.social-icons i {
+    color: aliceblue;
+    font-size: 20px; /* Ajusta el tamaño del icono */
+}
+
+.social-icons i:hover {
+    color: #9c9286ff;
+}
+
+.bottom-bar2 {
+    background: #254c57ff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bottom-bar2 p {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+}
+/*FIN*/
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Cambia la dirección del flex en pantallas pequeñas */
+        height: auto; /* Ajusta la altura */
+        padding: 10px; /* Cambia el padding */
+    }
+
+    .header .nav-links {
+        display: flex;
+        flex-direction: column; /* Muestra los enlaces en columna */
+        align-items: center; /* Centra los enlaces */
+    }
+
+    .TextIMG1, .TextIMG2 {
+        flex-direction: column; /* Muestra imagen y texto en columna */
+        align-items: center; /* Centra elementos en columna */
+    }
+
+    .image-container {
+        flex-direction: column; /* Muestra imágenes en columna */
+    }
+
+    .footer-content {
+        flex-basis: 100%; /* Cada sección del pie de página ocupará el 100% */
+    }
+
+    /* Ajustes de fuente */
+    body {
+        font-size: 16px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+img {
+    max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.header .btn button {
+    padding: 12px 30px; /* Aumenta el padding para pantallas táctiles */
+}
+
+body {
+    font-size: 1rem; /* Esto es más accesible y escalable */
+}

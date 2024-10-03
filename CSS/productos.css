@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'MiCaligrafia';
+    src: url("/FUENTEs/helvetica-neue-55-cufonfonts/HelveticaNeue-Light.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: MiCaligrafia, 'HelveticaNeueBold';
+    font-size: 20px;
+    color: rgb(48, 43, 43);
+}
+
+body {
+    background-color: #9c9286ff !important;
+    overflow-x: hidden;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.header {
+    background-color: #003333ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 85px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none; /* quita los puntos de la lista */
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+    color: #9c9286ff;
+}
+
+.header .btn button {
+    font: 700;
+    color: rgb(255, 255, 255);
+    padding: 9px 25px;
+    background: #9c9286ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+    background-color: wheat;
+    color: rgb(138, 138, 110);
+}
+
+/* TARJETAS */
+.container-1 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+    justify-content: space-between; /* Distribuye las tarjetas uniformemente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 1100px;
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 40px); /* Cada tarjeta ocupa un tercio del ancho */
+    margin: 10px; /* Espaciado alrededor de las tarjetas */
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(69, 69, 69, 0.606);
+    transition: all 400ms ease;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+}
+
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido h3 {
+    font-size: 25px;
+    color: #003333ff;
+    font-weight: bold;
+}
+
+.card .contenido p {
+    line-height: 1.5;
+    color: rgb(123, 123, 123);
+}
+
+.card .contenido h4 {
+    font-weight: bold;
+    background-color: rgb(136, 92, 92);
+    color: white;
+    border-radius: 10px;
+}
+
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255); /* Texto en blanco para mayor contraste */
+    background-color: rgb(43, 91, 174); /* Fondo similar al botón del header */
+    border-radius: 10px; /* Igual al botón del header */
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2); /* Añade un ligero relieve */
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+.card .contenido a:hover {
+    background-color: wheat; /* Cambia el color de fondo al hacer hover */
+    color: rgb(138, 138, 110); /* Cambia el color del texto al hacer hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4); /* Aumenta la sombra para más relieve */
+    transform: translateY(-3%); /* Efecto de elevación */
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: #003333ff;
+    padding-top: 5px;
+}
+
+.container {
+    width: 80%; /* Ajusta el ancho para centrar mejor el contenido */
+    margin: 0 auto; /* Centra horizontalmente el footer */
+    display: flex;
+    justify-content: space-between; /* Mantiene los bloques separados */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.footer-content {
+    flex-basis: 33%; /* Cada sección ocupa el mismo espacio */
+    text-align: center; /* Centra el contenido de cada bloque */
+}
+
+.h3f {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: white;
+}
+
+.listFooter1 {
+    padding: 0;
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+.listFooter1 li {
+    margin: 5px 0; /* Añade un pequeño margen para separar los elementos */
+}
+
+.listFooter1 li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s ease;
+}
+
+.listFooter1 li a:hover {
+    color: #9c9286ff; /* Cambia el color al pasar el mouse */
+}
+
+.social-icons {
+    text-align: center;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.social-icons i {
+    color: aliceblue;
+    font-size: 20px; /* Ajusta el tamaño del icono */
+}
+
+.social-icons i:hover {
+    color: #9c9286ff;
+}
+
+.bottom-bar2 {
+    background: #254c57ff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.bottom-bar2 p {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+}
