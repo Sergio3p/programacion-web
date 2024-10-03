@@ -329,20 +329,43 @@ footer {
     .carousel-inner img {
       height: 200px;
     }
-  
-    /* Ajustes para las secciones con imágenes y texto */
-    .TextIMG1, .TextIMG2 {
-      flex-direction: column;
-      text-align: center;
+    
+    /* Ajuste para .TextIMG1 */
+    .TextIMG1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
     }
-  
-    .TextIMG1 img, .TextIMG2 img {
-      max-width: 100%;
-      margin: 10px auto;
+
+    .TextIMG1 img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
     }
-  
-    .text-box1, .text-box2 {
-      padding: 10px;
+
+    .text-box1 {
+        padding: 10px;
+    }
+
+    /* Ajuste para .TextIMG2 */
+    .TextIMG2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .TextIMG2 img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .text-box2 {
+        padding: 10px;
     }
   
     /* Ajustes para la galería de productos */
