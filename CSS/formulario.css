@@ -222,6 +222,7 @@ input::placeholder, textarea::placeholder {
         padding: 12px 15px; /* Ajustamos el padding */
         margin-bottom: 15px; /* Reducimos el espacio entre los campos */
         box-sizing: border-box; /* Garantizamos que el padding y los bordes se incluyan en el ancho total */
+        font-size: 14px; /* Reducimos el tamaño de la fuente para mejorar la visualización */
     }
 
     .btn1 {
