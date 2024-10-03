@@ -346,6 +346,9 @@ footer {
     }
 
     .text-box1 {
+        max-width: 90%;  /* Limitar el ancho máximo */
+        word-wrap: break-word; /* Evita desbordamientos con palabras largas */
+        overflow: hidden; /* Asegura que el contenido no se desborde */
         padding: 10px;
     }
 
@@ -365,6 +368,9 @@ footer {
     }
 
     .text-box2 {
+        max-width: 90%;  /* Limitar el ancho máximo */
+        word-wrap: break-word; /* Evita desbordamientos con palabras largas */
+        overflow: hidden; /* Asegura que el contenido no se desborde */
         padding: 10px;
     }
   
@@ -404,3 +410,4 @@ img {
 body {
     font-size: 1rem; /* Esto es más accesible y escalable */
 }
+
